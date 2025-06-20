@@ -1,0 +1,76 @@
+// ~/.config/waybar/config
+
+{
+  "layer": "top",
+  "height": 32,
+  "modules-left": [ "hyprland/workspaces" ],
+  "modules-center": [],
+  "modules-right": [
+    "tray",
+    "custom/ibus-show",
+//    "custom/clipboard",
+    "pulseaudio",
+    "custom/bluetooth",
+    "battery",
+    "network",
+    "clock"
+  ],
+
+  "custom/ibus-show": {
+    "format": "{}",
+    "exec": "~/.config/polybar/customs/ibus-show.sh",
+    "on-click": "[ \"$(ibus engine)\" = \"skk\" ] && ibus engine xkb:us::eng || ibus engine skk",
+    "on-click-right": "ibus-setup",
+    "interval": 1
+  },
+//  "custom/clipboard": {
+//    "format": "",
+//    "on-click": "echo -n $(clipsim --print | rofi -dmenu -sep '\\0' -p \"clipboard\" | sed 's/^[0-9]\\+\\s*//' ) | xclip -selection clipboard"
+//  },
+  "tray": {
+    "spacing": 15
+  },
+
+  "pulseaudio": {
+    "format": " {volume}%",
+    "format-muted": " muted",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+  },
+
+  "custom/bluetooth": {
+    "return-type":"json",
+    "format": "{}",
+    "exec": "~/.config/waybar/customs/bluetooth.sh",
+    "on-click": "kitty bluetuith",
+    "on-click-right": "bluetoothctl show | grep -q \"Powered: yes\" && bluetoothctl power off || bluetoothctl power on",
+    "interval": 2
+  },
+
+  "battery": {
+    "format": "",
+    "format-charging": "",
+    "format-plugged": "",
+    "states": {
+      "good": 80,
+      "warning": 30,
+      "critical": 15
+    },
+    "interval": 2
+  },
+
+  "network": {
+    "format-wifi": "",
+    "format-ethernet": "",
+    "format-disconnected": "",
+    "interval": 2
+  },
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%Y-%m-%d %H:%M:%S}",
+    "interval": 1
+  }
+}
+

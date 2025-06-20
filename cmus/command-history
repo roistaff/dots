@@ -1,0 +1,54 @@
+q
+add /mnt/Music
+clear
+add ~/Astrophysics
+add ~/mnt/Music
+add ~/sd
+add ~/Music
+wq
+update
+fset 90s=date>=1990&date<2000
+1
+add ~/cmus-plugins/yt-music/songs/searchresult.pls
+load ~/cmus-plugins/yt-music/songs/searchresult.pls
+save example.pls
+open ~/meta-only.mp3
+clear 
+:::::::::::::::wq
+exit
+ew
+:::::::::::::::::::::::::::::::::::::::q
+updatr::
+colorscheme gruvbox-warm
+colorscheme dracula
+colorscheme solarized-light
+colorscheme zenburn
+colorscheme jellybeans
+colorscheme gruvbox
+colorscheme gruvboc
+colorscheme grubbox
+colorscheme gray-88
+colorscheme light
+colorscheme spotify
+colorscheme amazon
+shell ./cmus-plugins/cmus-album-cover.sh
+colorschmee amazon
+colorscheeme amazon
+colorscheme default
+colorscheme dault
+colorsheme default
+c
+colorscheme default.theme
+colorscheme defualt.theme
+colorsheme default.theme
+colorscheme onedark
+shell bash ~/cmus-plugins/cmus-album-cover.sh
+shell 4channels
+set color_statusline_fg=234
+set color_info=235
+shell notify-send hello
+exec notify-send hello
+bind -f common n exec notify-send hello
+bind -f common n exec notify-send
+bind -f common } vol -0 -1%
+add /Music

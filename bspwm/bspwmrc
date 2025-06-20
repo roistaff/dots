@@ -1,0 +1,32 @@
+#! /bin/sh
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+bspc monitor -d  イチ ニー ミ ヨン ゴー
+
+bspc config border_width         2
+bspc config window_gap           5
+bspc config bottom_padding	 0
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+bspc rule -a "Eww - bar" layer=above
+bspc rule -a '*:*:Picture-in-Picture' sticky=true
+bspc rule -a "Conky" layer=above manage=off
+sxhkd &
+picom --config $HOME/.config/picom/picom.conf &
+dunst &
+polybar &
+xsetroot -cursor_name left_ptr
+GTK_IM_MODULE=ibus
+QT_IM_MODULE=ibus
+XMODIFIERS=@im=ibus
+ibus-daemon -rxRd
+feh --bg-center $HOME/Pictures/wallpaper.png
+dbus-update-activation-environment DISPLAY
+clipsim --daemon &
