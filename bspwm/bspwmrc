@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d  イチ ニー ミ ヨン ゴー
+bspc monitor -d 一 二 三 四 五
 
 bspc config border_width         2
 bspc config window_gap           5
@@ -16,7 +16,7 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a "Eww - bar" layer=above
-bspc rule -a '*:*:Picture-in-Picture' sticky=true
+bspc rule -a '*:*:Picture-in-Picture' sticky=true state=floating
 bspc rule -a "Conky" layer=above manage=off
 sxhkd &
 picom --config $HOME/.config/picom/picom.conf &

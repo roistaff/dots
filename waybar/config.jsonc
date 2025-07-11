@@ -32,11 +32,11 @@
   },
 
   "pulseaudio": {
-    "format": " {volume}%",
+    "format": "{volume}%",
     "format-muted": " muted",
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
-    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +2%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -2%"
   },
 
   "custom/bluetooth": {
