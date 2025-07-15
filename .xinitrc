@@ -7,6 +7,6 @@ export XDG_SESSION_TYPE=x11
 export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
-#sxhkd &
+sxhkd &
 exec bspwm
-#exec sxwm
+#exec berry
