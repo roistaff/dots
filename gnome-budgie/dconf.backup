@@ -1,0 +1,172 @@
+[com/solus-project/budgie-panel]
+dark-theme=true
+migration-level=1
+panels=['74052bc2-696f-11f0-91cf-90ccdf3869a4']
+
+[com/solus-project/budgie-panel/applets/{6f2dc66c-6970-11f0-91cf-90ccdf3869a4}]
+alignment='start'
+name='Budgie Menu'
+position=0
+
+[com/solus-project/budgie-panel/applets/{7ed2c258-696f-11f0-91cf-90ccdf3869a4}]
+alignment='center'
+name='Clock'
+position=0
+
+[com/solus-project/budgie-panel/applets/{848414a4-696f-11f0-91cf-90ccdf3869a4}]
+alignment='center'
+name='Night Light'
+position=1
+
+[com/solus-project/budgie-panel/applets/{8ca5a44a-696f-11f0-91cf-90ccdf3869a4}]
+alignment='end'
+name='System Tray'
+position=0
+
+[com/solus-project/budgie-panel/applets/{90d39860-696f-11f0-91cf-90ccdf3869a4}]
+alignment='start'
+name='Workspace Switcher'
+position=1
+
+[com/solus-project/budgie-panel/applets/{972d27b2-696f-11f0-91cf-90ccdf3869a4}]
+alignment='end'
+name='User Indicator'
+position=2
+
+[com/solus-project/budgie-panel/applets/{9f4057d2-69cc-11f0-a843-90ccdf3869a4}]
+alignment='end'
+name='Raven Trigger'
+position=1
+
+[com/solus-project/budgie-panel/panels/{74052bc2-696f-11f0-91cf-90ccdf3869a4}]
+applets=['7ed2c258-696f-11f0-91cf-90ccdf3869a4', '848414a4-696f-11f0-91cf-90ccdf3869a4', '6f2dc66c-6970-11f0-91cf-90ccdf3869a4', '90d39860-696f-11f0-91cf-90ccdf3869a4', '8ca5a44a-696f-11f0-91cf-90ccdf3869a4', '9f4057d2-69cc-11f0-a843-90ccdf3869a4', '972d27b2-696f-11f0-91cf-90ccdf3869a4']
+dock-mode=false
+enable-shadow=true
+location='top'
+size=30
+spacing=0
+theme-regions=true
+transparency='none'
+
+[com/solus-project/budgie-wm]
+button-layout='appmenu:minimize,maximize,close'
+caffeine-mode=false
+center-windows=true
+
+[com/solus-project/clock/instance/clock/{7ed2c258-696f-11f0-91cf-90ccdf3869a4}]
+use-custom-timezone=false
+
+[com/solus-project/tray/{8ca5a44a-696f-11f0-91cf-90ccdf3869a4}]
+scaling=true
+spacing=3
+
+[net/launchpad/plank/docks/dock1]
+alignment='center'
+dock-items=['chromium-1.dockitem', 'firefox-2.dockitem', 'kitty.dockitem', 'code-oss.dockitem', 'discord.dockitem']
+hide-mode='window-dodge'
+icon-size=42
+position='left'
+theme='Transparent'
+zoom-enabled=true
+
+[org/buddiesofbudgie/budgie-desktop-view]
+show=false
+
+[org/buddiesofbudgie/budgie-desktop/raven/widgets]
+initialized=true
+uuids=['f41a8d07-14b4-41af-aee4-fa5c8bba7a27', '754daed4-e626-4121-8430-35bc277ca47e', '82595eb3-389d-4cb9-bab1-a4bfc6d96112', 'faecc4b7-5932-4b34-a632-f43b978c4ec3']
+
+[org/buddiesofbudgie/budgie-desktop/raven/widgets/instance-info/754daed4-e626-4121-8430-35bc277ca47e]
+module='org.buddiesofbudgie.budgie-desktop.raven.widget.SoundOutput.so'
+
+[org/buddiesofbudgie/budgie-desktop/raven/widgets/instance-info/82595eb3-389d-4cb9-bab1-a4bfc6d96112]
+module='org.buddiesofbudgie.budgie-desktop.raven.widget.SoundInput.so'
+
+[org/buddiesofbudgie/budgie-desktop/raven/widgets/instance-info/f41a8d07-14b4-41af-aee4-fa5c8bba7a27]
+module='org.buddiesofbudgie.budgie-desktop.raven.widget.Calendar.so'
+
+[org/buddiesofbudgie/budgie-desktop/raven/widgets/instance-info/faecc4b7-5932-4b34-a632-f43b978c4ec3]
+module='org.buddiesofbudgie.budgie-desktop.raven.widget.MediaControls.so'
+
+[org/buddiesofbudgie/budgie-desktop/screenshot]
+screenshot-mode='Selection'
+
+[org/buddiesofbudgie/control-center]
+last-panel='background'
+window-state=(980, 640, false)
+
+[org/gnome/desktop/background]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/budgie/extreme-desert-hike.jpg'
+primary-color='#000000'
+secondary-color='#000000'
+
+[org/gnome/desktop/input-sources]
+current=uint32 0
+sources=[('xkb', 'jp')]
+xkb-options=@as []
+
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+cursor-size=24
+cursor-theme='Adwaita'
+font-antialiasing='grayscale'
+font-hinting='slight'
+font-name='Adwaita Sans 11'
+font-rgba-order='rgb'
+gtk-theme='Adwaita'
+icon-theme='hicolor'
+text-scaling-factor=1.0
+toolbar-icons-size='large'
+toolbar-style='both-horiz'
+
+[org/gnome/desktop/peripherals/touchpad]
+disable-while-typing=false
+natural-scroll=false
+two-finger-scrolling-enabled=true
+
+[org/gnome/desktop/screensaver]
+color-shading-type='solid'
+lock-delay=uint32 0
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/budgie/extreme-desert-hike.jpg'
+primary-color='#000000'
+secondary-color='#000000'
+
+[org/gnome/desktop/session]
+idle-delay=uint32 300
+
+[org/gnome/desktop/sound]
+event-sounds=true
+input-feedback-sounds=false
+
+[org/gnome/desktop/wm/preferences]
+button-layout='appmenu:minimize,maximize,close'
+num-workspaces=4
+
+[org/gnome/nm-applet/eap/e24a41df-38a1-4590-bd57-93391437dece]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[org/gnome/settings-daemon/plugins/power]
+idle-dim=true
+sleep-inactive-ac-timeout=900
+sleep-inactive-battery-timeout=900
+
+[org/gnome/settings-daemon/plugins/xsettings]
+overrides={'Gtk/ShellShowsAppMenu': <0>, 'Gtk/DecorationLayout': <'menu:minimize,maximize,close'>}
+
+[org/gtk/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=167
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+window-position=(82, 30)
+window-size=(1203, 691)
