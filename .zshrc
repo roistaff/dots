@@ -6,7 +6,7 @@ function git_branch_info {
   git_branch=$(git branch 2>/dev/null | sed -n '/\* /s///p')
   git_dirty=$(git_dirty_info)
   color=$([[ -n $git_dirty ]] && echo "%F{yellow}" || echo "%F{green}")
-  [[ -n $git_branch ]] && echo " ${color} (${git_branch}${git_dirty})"
+  [[ -n $git_branch ]] && echo " ${color}(git) (${git_branch}${git_dirty})"
 }
 
 function virtualenv_info() {
@@ -14,14 +14,14 @@ function virtualenv_info() {
       echo "(%F{white}$(basename $VIRTUAL_ENV)%f) "
   fi
 }
-
+#alias curl='noglob curl'
 setopt prompt_subst
 setxkbmap jp
 prompt() {
   local last_status=$?
   local prompt_color=$([[ $last_status -eq 0 ]] && echo "%F{green}" || echo "%F{red}")
   
-  PS1="$(virtualenv_info)$(pwd | sed "s|^$HOME|~|")$(git_branch_info) ${prompt_color}￫ %F{reset}"
+  PS1="$(virtualenv_info)$(pwd | sed "s|^$HOME|~|")$(git_branch_info) ${prompt_color}> %F{reset}"
 }
 
 precmd_functions+=(prompt)
@@ -48,3 +48,6 @@ bindkey "^[[B" down-line-or-beginning-search
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu select
+
+. "/home/vmyu/.wasmedge/env"
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh

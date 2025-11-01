@@ -12,5 +12,3 @@ set imdisable
 let g:lightline = {
 \	'colorscheme':'one',
 \	'background':'light'}
-"wget http://openlab.jp/skk/dic/SKK-JISYO.L.gz
-" gzip -d SKK-JISYO.L.gz
